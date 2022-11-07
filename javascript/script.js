@@ -4,32 +4,32 @@ const cardContainer = document.querySelector('.card-container');
 //Array di oggetti
 const peopleArray = [
     {
-       nome : 'Wayne Barnett',
+       name : 'Wayne Barnett',
        role : 'Founder & CEO',
        photo : 'wayne-barnett-founder-ceo.jpg'
     },
     {
-        nome : 'Angela Caroll',
+        name : 'Angela Caroll',
         role : 'Chief Editor',
         photo : 'angela-caroll-chief-editor.jpg'
      },
      {
-        nome : 'Walter Gordon',
+        name : 'Walter Gordon',
         role : 'Office Manager',
         photo : 'walter-gordon-office-manager.jpg'
      },
      {
-        nome : 'Angela Lopez',
+        name : 'Angela Lopez',
         role : 'Social Media Manager',
         photo : 'angela-lopez-social-media-manager.jpg'
      },
      {
-        nome : 'Scott Estrada',
+        name : 'Scott Estrada',
         role : 'Developer',
         photo : 'scott-estrada-developer.jpg'
      },
      {
-        nome : 'Barbara Ramos',
+        name : 'Barbara Ramos',
         role : 'Graphic Designer',
         photo : 'barbara-ramos-graphic-designer.jpg'
      },
@@ -45,9 +45,9 @@ function createElement(value) {
     const imgElement = document.createElement('img');
     imgElement.setAttribute('src', `img/${peopleArray[value].photo}` );
 
-    //creo l'elemento nome e setto il contenuto in base al valore di "name"
+    //creo l'elemento name e setto il contenuto in base al valore di "name"
     const nameElement = document.createElement('h2');
-    nameElement.innerHTML = `${peopleArray[value].nome}`;
+    nameElement.innerHTML = `${peopleArray[value].name}`;
 
     //creo l'elemento ruolo e setto il contenuto in base al valore di "role"
     const roleElement = document.createElement('p');
