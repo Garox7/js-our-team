@@ -36,7 +36,7 @@ const peopleArray = [
 ];
 
 function createElement(value) {
-    //creo la card e la inserisco all'interno di .card-container
+    //creo div.card e lo inserisco all'interno di .card-container
     const cardElement = document.createElement('div');
     cardElement.classList.add('card');
     cardContainer.append(cardElement);
