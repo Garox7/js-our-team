@@ -1,0 +1,11 @@
+:root {
+    --bg-color: #f2f3ed;
+    --bg-card: #fff;
+    --text-color: #101012;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
