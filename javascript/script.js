@@ -1,4 +1,3 @@
-
 const cardContainer = document.querySelector('.card-container');
 
 //Array di oggetti
@@ -57,6 +56,17 @@ function createElement(value) {
     cardElement.append(imgElement, nameElement, roleElement);
 }
 
+function createElementAlternative(value) {
+   cardContainer.innerHTML += `
+   <div class="card">
+      <img src="img/${peopleArray[value].photo}">
+      <h2>${peopleArray[value].name}</h2>
+      <p>${peopleArray[value].role}</p>
+   </div>
+   `;
+}
+
 for (let i = 0; i < peopleArray.length; i++) {
-    createElement(i);
+   //  createElement(i);
+    createElementAlternative(i);
 }
