@@ -56,17 +56,35 @@ function createElement(value) {
     cardElement.append(imgElement, nameElement, roleElement);
 }
 
-function createElementAlternative(value) {
-   cardContainer.innerHTML += `
+
+//FUNZIONE CON CICLO FOR
+function createElementAlternativeFOR(value) {
+   return `
    <div class="card">
       <img src="img/${peopleArray[value].photo}">
       <h2>${peopleArray[value].name}</h2>
       <p>${peopleArray[value].role}</p>
-   </div>
-   `;
+   </div>`
 }
 
-for (let i = 0; i < peopleArray.length; i++) {
-   //  createElement(i);
-    createElementAlternative(i);
+// for (let i = 0; i < peopleArray.length; i++) {
+//    //  createElement(i);
+//     cardContainer.innerHTML += createElementAlternativeFOR(i);
+// }
+
+
+
+//FUNZIONE CON CICLO FOR EACH. IN QUESTO CASO NON HO BISOGNO DI DEFINIRE L'"ARRAY[VALORE]", PERCHè CON IL CILO FOR EACH CHE ANDREMO AD UTILIZZARE STIAMO GIà SELEZIONANDO GLI ELEMENTI DELL'ARRAY.
+function createElementAlternative(object) {
+   return `
+   <div class="card">
+      <img src="img/${object.photo}">
+      <h2>${object.name}</h2>
+      <p>${object.role}</p>
+   </div>`
 }
+
+// STIAMO DICENDO QUINDI DI STAMPARE ALL'INTERNO DELL'HTML DI CARD CONTAINER LA FUNZIONE SOPRA PER UN NUMERO DI VOLTE PARI AGLI ELEMENTI DELL'ARRAY (IN QUESTO CASO OGETTI)
+peopleArray.forEach(object => {
+   cardContainer.innerHTML += createElementAlternative(object);
+});
